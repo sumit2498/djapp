@@ -1,0 +1,51 @@
+
+
+{% if error %}
+{{ error }}
+<br />
+<br />
+{% endif %}
+
+<h1>Register!</h1>
+
+<form method="POST" action="">
+{% csrf_token %}
+{% for field in form %}
+  {{field.label}}
+  {% endfor %}
+ Email:
+<br />
+<input type="email" name="email" />
+<br />
+First Name:
+<br />
+<input type="text" name="first_name" />
+<br />
+Last Name:
+<br />
+<input type="text" name="last_name" />
+<br />
+Password:
+<br />
+<input type="password" name="password1" />
+<br />
+Confirm Password:
+<br />
+<input type="password" name="password2" />
+<br />
+Address:
+<br />
+<input type="text" name="address" />
+<br />
+Date Of Birth:
+<br />
+<input type="date" name="dob" />
+<br />
+Company:
+<br />
+<input type="text" name="company" />
+<br />
+<br />
+<input class="btn btn-primary" type="submit" value="Register" />
+</form> 
+
